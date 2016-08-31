@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Personal Trainer Manager</string>
+
+    <string name="prompt_user">User</string>
+    <string name="prompt_password">Password</string>
+    <string name="user_name">jdoe</string>
+    <string name="password">welcome1</string>
+    <string name="sign_in">Sign in</string>
+    <string name="successful_sign_in">Logged in successfully</string>
+    <string name="error_invalid_user">This user name is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+    <string name="descriptionAppIcon">App Icon</string>
+
+</resources>

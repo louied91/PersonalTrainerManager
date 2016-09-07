@@ -12,6 +12,10 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="logged">Logged In:</string>
+    <string name="new_customer">New Customer</string>
+    <string name="list_customers">Customer List</string>
+    <string name="sessions">View Sessions</string>
 
     <string name="descriptionAppIcon">App Icon</string>
 

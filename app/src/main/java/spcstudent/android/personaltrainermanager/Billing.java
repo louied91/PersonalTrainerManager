@@ -1,13 +1,14 @@
 package spcstudent.android.personaltrainermanager;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
-public class SuccessfulLogin extends AppCompatActivity {
+
+public class Billing extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_successful_login);
+        setContentView(R.layout.billing);
     }
 }

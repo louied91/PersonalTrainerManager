@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:orientation="horizontal"
+              android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:paddingLeft="18dp"
+        android:paddingStart="18dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:text="@string/logged"/>
+
+    <TextView
+        android:id="@+id/username_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:text="@string/user_name"/>
+
+</LinearLayout>

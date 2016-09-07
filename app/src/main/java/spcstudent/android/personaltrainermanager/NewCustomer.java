@@ -1,5 +1,7 @@
 package spcstudent.android.personaltrainermanager;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,13 +14,15 @@ public class NewCustomer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.customer_list);
 
-        Button addCustomerButton = (Button) findViewById(R.id.newCustomerButton);
-        addCustomerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment header = fm.findFragmentById(R.id.username_textview);
+
+        if (header == null) {
+            header = new DisplayUsername();
+            fm.beginTransaction()
+                    .add(R.id.header_container, header)
+                    .commit();
+        }
     }
 
 }

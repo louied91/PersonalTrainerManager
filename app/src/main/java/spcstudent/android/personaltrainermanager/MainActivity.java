@@ -10,6 +10,10 @@ import android.widget.Button;
 
 public class MainActivity extends FragmentActivity {
 
+    private Button mCustomerList;
+    private Button mSessionList;
+    private Button mNewCustomer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,16 +30,34 @@ public class MainActivity extends FragmentActivity {
                     .commit();
         }
 
-
-        Button addCustomerButton = (Button) findViewById(R.id.newCustomerButton);
-
-        addCustomerButton.setOnClickListener(new View.OnClickListener() {
+        mCustomerList = (Button)findViewById(R.id.listCustomersButton);
+        mCustomerList.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, NewCustomer.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                Intent CustomerListIntent = new Intent(MainActivity.this, CustomerList.class);
+                MainActivity.this.startActivity(CustomerListIntent);
             }
         });
+
+        mSessionList = (Button)findViewById(R.id.viewCustomerSessionsButton);
+        mSessionList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent SessionListIntent = new Intent(MainActivity.this, SessionList.class);
+                MainActivity.this.startActivity(SessionListIntent);
+            }
+        });
+
+        mNewCustomer = (Button)findViewById(R.id.newCustomerButton);
+        mNewCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent NewCustomerIntent = new Intent(MainActivity.this, NewCustomer.class);
+                MainActivity.this.startActivity(NewCustomerIntent);
+            }
+        });
+
     }
+
 
 }

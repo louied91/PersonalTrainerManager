@@ -13,34 +13,58 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_height="match_parent">
 
-        <Button
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/customer_list_container"></FrameLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/new_customer"
-            android:id="@+id/newCustomerButton"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            fab:fab_addButtonColorNormal="@color/colorAccent"
+            fab:fab_addButtonColorPressed="@color/colorAccent"
+            fab:fab_addButtonPlusIconColor="@color/colorWhite"
+            fab:fab_labelStyle="@style/menuLabelStyle"
+            fab:fab_labelsPosition="left"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/list_customers"
-            android:id="@+id/listCustomersButton"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="57dp"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_new_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorBlackSemiTransparent"
+                fab:fab_title="Add New Customer"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_size="mini"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Customer Sessions"
-            android:id="@+id/viewCustomerSessionsButton"
-            android:layout_below="@+id/listCustomersButton"
-            android:layout_centerHorizontal="true"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_session_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorBlackSemiTransparent"
+                fab:fab_title="Session List"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_size="mini"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorBlackSemiTransparent"
+                fab:fab_title="Logout"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_size="mini"/>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
     </RelativeLayout>
 
 </LinearLayout>

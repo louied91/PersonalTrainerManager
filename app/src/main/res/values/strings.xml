@@ -8,6 +8,7 @@
     <string name="password">welcome1</string>
     <string name="sign_in">Sign in</string>
     <string name="successful_sign_in">Logged in successfully</string>
+    <string name="logoutPromptText">Logging You Off</string>
     <string name="error_invalid_user">This user name is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>

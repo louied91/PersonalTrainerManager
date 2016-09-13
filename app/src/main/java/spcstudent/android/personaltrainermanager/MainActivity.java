@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Button;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends FragmentActivity {
 
     private Button mCustomerList;
@@ -30,34 +32,46 @@ public class MainActivity extends FragmentActivity {
                     .commit();
         }
 
-        mCustomerList = (Button)findViewById(R.id.listCustomersButton);
-        mCustomerList.setOnClickListener(new View.OnClickListener() {
+        // ############# Floating Action Menu ############### //
+
+        FloatingActionButton logout = (FloatingActionButton) findViewById(R.id.action_logout);
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent CustomerListIntent = new Intent(MainActivity.this, CustomerList.class);
-                MainActivity.this.startActivity(CustomerListIntent);
+                android.app.FragmentManager manager = getFragmentManager();
+                FragmentLogout dialog = new FragmentLogout ();
+                dialog.show(manager, "Logout");
             }
         });
 
-        mSessionList = (Button)findViewById(R.id.viewCustomerSessionsButton);
-        mSessionList.setOnClickListener(new View.OnClickListener() {
+        final FloatingActionButton sessionList = (FloatingActionButton)
+                findViewById(R.id.action_session_list);
+        sessionList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent SessionListIntent = new Intent(MainActivity.this, SessionList.class);
-                MainActivity.this.startActivity(SessionListIntent);
+                Intent newSessionIntent = new Intent(MainActivity.this,
+                        SessionList.class);
+                MainActivity.this.startActivity(newSessionIntent);
             }
         });
 
-        mNewCustomer = (Button)findViewById(R.id.newCustomerButton);
-        mNewCustomer.setOnClickListener(new View.OnClickListener() {
+        final FloatingActionButton newCustomer = (FloatingActionButton)
+                findViewById(R.id.action_new_customer);
+        newCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent NewCustomerIntent = new Intent(MainActivity.this, NewCustomer.class);
-                MainActivity.this.startActivity(NewCustomerIntent);
+                Intent newCustomerIntent = new Intent(MainActivity.this,
+                        NewCustomer.class);
+                MainActivity.this.startActivity(newCustomerIntent);
             }
         });
-
     }
 
+    @Override
+    public void onRestart() {
+        super.onRestart();
 
+        finish();
+        startActivity(getIntent());
+    }
 }

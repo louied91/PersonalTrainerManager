@@ -21,13 +21,50 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ActivityCustomerList"
+            android:label="@string/title_activity_customer_list"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"/>
         </activity>
-        <activity android:name=".NewCustomer">
+        <activity
+            android:name=".CustomerPage"
+            android:label="@string/title_activity_customer_page"
+            android:parentActivityName=".ActivityCustomerList"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityCustomerList"/>
         </activity>
-        <activity android:name=".CustomerList">
+        <activity
+            android:name=".NewCustomer"
+            android:label="@string/title_activity_edit_customer"
+            android:parentActivityName=".CustomerPage"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityCustomerPage"/>
         </activity>
-        <activity android:name=".SessionList">
+        <activity
+            android:name=".ActivityEditSession"
+            android:label="@string/title_activity_edit_session"
+            android:parentActivityName=".CustomerPage"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CustomerPage"/>
+        </activity>
+        <activity
+            android:name=".ActivitySignature"
+            android:label="Signature"
+            android:parentActivityName=".ActivityEditSession"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityEditSession"/>
         </activity>
     </application>
 

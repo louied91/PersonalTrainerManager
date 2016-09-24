@@ -18,6 +18,31 @@
     <string name="list_customers">Customer List</string>
     <string name="sessions">View Sessions</string>
 
+    <string name="fromGalleryButton">Gallery</string>
+    <string name="fromCameraButton">Camera</string>
+    <string name="hintFirstName">First Name</string>
+    <string name="hintLastName">Last Name</string>
+    <string name="hintDateOfBirth">Date of Birth</string>
+    <string name="hintBillingInfo">Billing Information</string>
+    <string name="hintEmail">Email</string>
+    <string name="buttonSaveCustomer">Save Customer</string>
+    <string name="setNewPhotoText">Set new photo from:</string>
+    <string name="hintSessionName">Session Name</string>
+    <string name="hintSessionDate">Session Date</string>
+    <string name="hintSessionTime">Session Time</string>
+    <string name="hintSessionCost">Session Cost</string>
+    <string name="saveSessionButton">Save Session</string>
+
+    <string name="textSignature">Signature:</string>
+    <string name="buttonAuthorize">Authorize</string>
+    <string name="buttonCancel">Cancel</string>
+
+    <string name="photoDescription">Photo of the user.</string>
     <string name="descriptionAppIcon">App Icon</string>
+
+    <string name="title_activity_customer_list">CustomerList</string>
+    <string name="title_activity_customer_page">CustomerPage</string>
+    <string name="title_activity_edit_customer">EditCustomer</string>
+    <string name="title_activity_edit_session">EditSession</string>
 
 </resources>
